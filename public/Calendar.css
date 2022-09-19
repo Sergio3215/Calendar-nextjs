@@ -1,0 +1,12 @@
+.list-item {
+    border: 1px solid black;
+    width: 25%;
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 2rem;
+}
+
+.list-item * {
+    text-align: center;
+}
+

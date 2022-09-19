@@ -1,0 +1,22 @@
+input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 9px;
+}
+input label, input {
+    margin: 0.2rem;
+    font-size: 1.2rem;
+}
+
+button, input[type=submit]{
+    padding: 10px;
+    margin-left:5rem;
+    border-radius: 10px;
+    background-color:blueviolet;
+    color:white;
+    font-size: 1.5rem;
+}
+
+button:hover, input[type=submit]:hover{
+    cursor:pointer;
+}
