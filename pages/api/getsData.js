@@ -1,5 +1,5 @@
 import { db, app, firebase } from '../../db';
-import { getFirestore, collection, getDocs, getDoc, addDoc, updateDoc, doc, deleteDoc, query, where } from "firebase/firestore";
+import { orderBy ,getFirestore, collection, getDocs, getDoc, addDoc, updateDoc, doc, deleteDoc, query, where } from "firebase/firestore";
 
 
 export default async function handler(req, res) {
@@ -12,8 +12,11 @@ export default async function handler(req, res) {
             throw new Error("El nombre de la base de datos no esta declarado");
         }
         const CalendarCol = collection(db, 'Calendar');
-        const CalendarSnapshot = await getDocs(CalendarCol);
+        const querySorted = query(CalendarCol, orderBy('day'))
+        const CalendarSnapshot = await getDocs(querySorted);
         CalendarList = CalendarSnapshot.docs.map(doc => doc.data());
+
+        
         res.json({ CalendarList,success:true })
     } 
     catch (error) {

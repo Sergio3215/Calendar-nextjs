@@ -4,9 +4,30 @@
     border-radius: 1rem;
     padding: 10px;
     margin: 2rem;
+    min-width: 226px;
+    max-width: 226px;
 }
 
 .list-item * {
     text-align: center;
 }
+.list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+#create--Calendar{
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+    min-width: var(--widthLimited);
+    max-width: var(--widthLimited);
+    padding: 3rem;
+    border-radius: 1rem;
+    margin-left: 40%;
+}
+:root{
+    --widthLimited: 15rem;
+}
